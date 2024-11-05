@@ -1,0 +1,41 @@
+﻿@import "_aeoncolors.gen.scss";
+
+/*Import Bootstrap variables so they can be referenced.  (Requires functions as well, to use rgba().*/
+@import "../../node_modules/bootstrap/scss/_functions.scss";
+
+/* AEON MODIFICATION*/
+/* Use -hex- values so compilation doesn't fail */
+$white: $acs-hex-white;
+$gray-100: $acs-hex-gray-l50;
+$gray-200: $acs-hex-gray-l40;
+$gray-300: $acs-hex-gray-l30;
+$gray-400: $acs-hex-gray-l20;
+$gray-500: $acs-hex-gray-l10;
+$gray-600: $acs-hex-gray-d10;
+$gray-700: $acs-hex-gray-d30;
+$gray-800: $acs-hex-gray-d40;
+$gray-900: $acs-hex-gray-d50;
+$black: $acs-hex-black;
+
+$blue: $acs-hex-blue-d20;
+$indigo: $acs-hex-purple;
+$purple: $acs-hex-purple-l10;
+$pink: $acs-hex-pink;
+$red: $acs-hex-red;
+$orange: $acs-hex-orange;
+$yellow: $acs-hex-yellow;
+$green: $acs-hex-green;
+$teal: $acs-hex-green-l10;
+$cyan: $acs-hex-cyan-d20;
+
+// Override contextual colors (primary, secondary, success, warning, etc.) if these should not be the same as what are assigned to the raw Bootstrap colors. Refer to _variables.scss for those mappings.
+$secondary: $acs-hex-gray-l40;
+$info: $acs-hex-blue-l40;
+/********************/
+
+@import "../../node_modules/bootstrap/scss/_variables.scss";
+
+/**********************/
+
+$faFontFamily: "Font Awesome 6 Pro";
+$card-bg: inherit;

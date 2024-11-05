@@ -1,0 +1,18 @@
+{
+    "version": "1.0.0",
+    "name": "asp.net",
+    "private": true,
+  "scripts": {
+    //"build:sass": "sass Pages/scss/main.scss wwwroot/css/main.css"
+    "build-sass": "Pages/scss/*.scss --output wwwroot/css"
+  },
+    "main": "index.js",
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "bootstrap": "^5.3.3",
+        "sass": "^1.80.6"
+    }
+}

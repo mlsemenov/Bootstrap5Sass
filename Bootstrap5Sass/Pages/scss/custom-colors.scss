@@ -1,0 +1,9 @@
+﻿
+
+@debug "CC1. $blue = #{$blue}";
+
+$blue: #0000fe;
+$green: #00fe00;
+$red: #fe0000;
+
+@debug "CC2. $blue = #{$blue}";

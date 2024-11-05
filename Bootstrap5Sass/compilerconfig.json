@@ -1,0 +1,26 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/main.css",
+    "inputFile": "Pages/scss/main.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/aeon-color-system.gen.css",
+    "inputFile": "Pages/css/aeon-color-system.gen.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/aeonbootstrap.css",
+    "inputFile": "Pages/css/aeonbootstrap.scss"
+  },
+  {
+    "outputFile": "Pages/aeon/aeonbootstrap-buttons.css",
+    "inputFile": "Pages/aeon/aeonbootstrap-buttons.scss"
+  },
+  {
+    "outputFile": "Pages/aeon/aeonbootstrap-variables.css",
+    "inputFile": "Pages/aeon/aeonbootstrap-variables.scss"
+  },
+  {
+    "outputFile": "Pages/aeon/aeon-color-system.gen.css",
+    "inputFile": "Pages/aeon/aeon-color-system.gen.scss"
+  }
+]

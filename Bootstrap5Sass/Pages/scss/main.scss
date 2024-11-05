@@ -1,0 +1,33 @@
+﻿// Pages/scss/main.scss
+/*@use "../../node_modules/bootstrap/scss/bootstrap" as bs;*/
+
+@import "../../node_modules/bootstrap/scss/_functions.scss";
+@import "../../node_modules/bootstrap/scss/_variables.scss";
+@import "../../node_modules/bootstrap/scss/_mixins.scss";
+
+@import "custom-colors" as cc;
+
+/*@use "aeonbootstrap-variables.scss"; 
+    // imports _functions.scss and _variables.scss, while allowing aeon to change values
+@use "aeon-color-system.gen.scss";*/
+
+/*Import the rest of Bootstrap now that variables have been modified from their defaults.*/
+
+@import "../../node_modules/bootstrap/scss/_maps.scss";
+
+
+@import "../../node_modules/bootstrap/scss/_utilities.scss";
+@import "../../node_modules/bootstrap/scss/_root.scss";
+@import "../../node_modules/bootstrap/scss/_reboot.scss";
+
+/**/
+
+
+@debug "M1. $blue = #{$blue}";
+
+body {
+    background-color: $blue;
+}
+
+@debug "M2. $blue = #{$blue}";
+

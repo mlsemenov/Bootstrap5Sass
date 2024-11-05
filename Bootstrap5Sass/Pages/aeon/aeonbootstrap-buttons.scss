@@ -1,0 +1,416 @@
+@import "_aeoncolors.gen.scss";
+
+.btn.disabled, .btn:disabled {
+    pointer-events: none;
+}
+
+.btn-primary {
+    color: $acs-white;
+    background-color: $acs-blue-d20;
+    border-color: $acs-blue-d20;
+
+    &:hover {
+        color: $acs-white;
+        background-color: $acs-blue-dark;
+        border-color: $acs-blue-dark;
+    }
+
+    &:focus, &.focus {
+        box-shadow: 0 0 0 0.2rem rgba($acs-hex-blue-d10, 0.5);
+    }
+
+    &.disabled, &:disabled {
+        color: $acs-white;
+        background-color: $acs-blue-d20;
+        border-color: $acs-blue-d20;
+    }
+
+    &:not(:disabled):not(.disabled) {
+        &:active, &.active {
+            color: $acs-white;
+            background-color: $acs-blue-dark;
+            border-color: $acs-blue-d40;
+
+            &:focus {
+                box-shadow: 0 0 0 0.2rem rgba($acs-hex-blue-d10, 0.5);
+            }
+        }
+    }
+}
+
+.show > .btn-primary.dropdown-toggle {
+    color: $acs-white;
+    background-color: $acs-blue-dark;
+    border-color: $acs-blue-d40;
+
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba($acs-hex-blue-d10, 0.5);
+    }
+}
+
+.panels-content .btn-group > .btn.btn-secondary,
+.dockright-button-container .btn-group > .btn.btn-secondary {
+    color: $acs-gray-d20;
+    background-color: $acs-white;
+    border: 1px solid $acs-white;
+    margin: 0 6px 0 6px;
+    padding: 3px 12px 3px 12px;
+    border-radius: 0.25rem;
+
+    &.narrow-padding {
+        padding: 3px 9px 3px 9px;
+    }
+
+    &.aeon-svg-icon-container .accent-color-not-set {
+        fill: $acs-gray-d20;
+    }
+}
+
+.btn-info {
+    color: $acs-blue;
+    border-color: $acs-blue;
+    background-color: $acs-white;
+
+    &:hover {
+        color: $acs-white;
+        border-color: $acs-blue;
+        background-color: $acs-blue;
+    }
+
+    &.disabled, &:disabled {
+        color: $acs-gray-d20;
+        background-color: $acs-white;
+        border-color: rgba($acs-hex-gray-d20, 1);
+    }
+
+    &:focus, &.focus {
+        box-shadow: 0 0 0 0.2rem rgba($acs-hex-blue, 0.25);
+    }
+
+    &:not(:disabled):not(.disabled) {
+        :active, .active {
+            color: $acs-white;
+            background-color: $acs-blue-d20;
+            border-color: $acs-blue-d20;
+
+            &:focus, &:focus {
+                box-shadow: 0 0 0 0.2rem rgba($acs-hex-cyan-d10, 0.5);
+            }
+        }
+    }
+}
+
+.show > .btn-info.dropdown-toggle {
+    color: $acs-white;
+    background-color: $acs-blue-d20;
+    border-color: $acs-blue-d20;
+
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba($acs-hex-cyan-d10, 0.5);
+    }
+}
+
+/*Split Button*/
+
+.btn-group {
+
+    .btn {
+        white-space: nowrap;
+    }
+
+    > :not(:first-child).btn.btn-info-split-dropdown {
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+    }
+
+    .btn-info-split-main {
+        background-color: $acs-white;
+        border-color: $acs-blue;
+        border-right-style: none;
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+        border-width: 2px;
+        color: $acs-blue;
+        font-family: 'Segoe UI';
+
+        &:hover {
+            background-color: $acs-blue-l40;
+            border-color: $acs-blue;
+            color: $acs-blue;
+        }
+
+        &:active {
+            background-color: $acs-white !important;
+            border-color: $acs-sea-blue !important;
+            color: $acs-sea-blue !important;
+        }
+
+        &:disabled {
+            background-color: $acs-white;
+            border-color: $acs-blue;
+            cursor: default;
+        }
+    }
+
+    .btn-info-split-dropdown-span {
+        border-left: 2px solid;
+        position: relative;
+        right: 9px;
+        border-width: thin;
+        z-index: 1;
+        color: $acs-blue;
+        border-color: $acs-blue;
+    }
+
+    .btn-info-split-dropdown {
+        background-color: $acs-white;
+        border-color: $acs-blue;
+        border-left-style: none;
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+        border-width: 2px;
+        color: $acs-blue;
+
+        &:hover {
+            background-color: $acs-blue-l40;
+            border-color: $acs-sea-blue;
+            color: $acs-sea-blue;
+
+            & > .btn-info-split-dropdown-span {
+                border-color: $acs-sea-blue;
+            }
+        }
+
+        &:active {
+            background-color: $acs-white !important;
+            border-color: $acs-sea-blue !important;
+            color: $acs-sea-blue !important;
+        }
+
+        &:disabled {
+            background-color: $acs-white;
+            border-color: $acs-blue;
+            cursor: default;
+
+            & > .btn-info-split-dropdown-span {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .btn-info-split-main:not(:disabled):not(.disabled).active,
+    .btn-info-split-dropdown:not(:disabled):not(.disabled).active {
+        background-color: $acs-white !important;
+        border-color: $acs-sea-blue !important;
+        color: $acs-sea-blue !important;
+    }
+}
+
+/*Split button End*/
+
+
+/*Navigate button Group*/
+
+.btn-info-nav-left {
+    background-color: $acs-white;
+    border-color: $acs-gray-d20;
+    border-right: none;
+    border-width: 2px;
+    border-top-left-radius: 0.2rem;
+    border-bottom-left-radius: 0.2rem;
+    color: $acs-gray;
+    z-index: 1;
+
+    &:hover {
+        background-color: $acs-gray-l40;
+        border-color: $acs-gray-d20;
+        color: $acs-gray-d20;
+
+        & > .btn-info-center-left-span {
+            color: $acs-gray-d20;
+        }
+
+        & > i {
+            color: $acs-gray-d20;
+        }
+    }
+
+    &:disabled {
+        background-color: $acs-white;
+        border-color: $acs-gray-d20 !important;
+        border-top-left-radius: 0.2rem;
+        border-bottom-left-radius: 0.2rem;
+        border-right: none;
+        color: $acs-gray;
+        opacity: 1;
+        cursor: default;
+
+        & > .btn-info-center-left-span {
+            color: $acs-gray-d20;
+            opacity: 0.1;
+        }
+
+        & > i {
+            color: $acs-gray-d20;
+            opacity: 0.1;
+        }
+    }
+
+    & > .btn-info-center-left-span {
+        color: $acs-gray;
+    }
+
+    & > i {
+        color: $acs-gray;
+    }
+}
+
+.btn-info-center-left-span {
+    border-left: 2px solid;
+    border-width: thin;
+    color: $acs-gray;
+    position: relative;
+    left: 18px;
+    z-index: 1;
+}
+
+
+.btn-group > .btn:not(:first-child).btn-info-nav-center,
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle).btn-info-nav-center,
+.btn-group > :not(:first-child).btn.btn-info-nav-center,
+.btn-group > .btn-group:not(:last-child) > .btn.btn-info-nav-center,
+.btn-info-nav-center {
+    border-right-style: none;
+    border-left-style: none;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-color: $acs-gray-d20;
+    border-width: 2px;
+    color: $acs-gray;
+    font-weight: 500;
+    background-color: $acs-white;
+    min-width: 100px;
+    max-width: 100px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    &:hover {
+        z-index: 0 !important;
+        border-color: $acs-gray-d20;
+        color: $acs-gray-d20;
+        background-color: $acs-gray-l40;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        border-color: $acs-gray-d20;
+        background-color: $acs-white;
+    }
+}
+
+.btn-info-center-right-span {
+    border-left: 2px solid;
+    position: relative;
+    right: 12px;
+    border-width: thin;
+    z-index: 1;
+    color: $acs-gray;
+}
+
+.btn-group > .btn:not(:first-child).btn-info-nav-right,
+.btn-group > .btn-group:not(:first-child) > .btn.btn-info-nav-right,
+.btn-info-nav-right {
+    background-color: $acs-white;
+    border-bottom-left-radius: 0 !important;
+    border-color: $acs-gray-d20;
+    border-left: none;
+    border-width: 2px;
+    border-top-left-radius: 0rem !important;
+    border-bottom-left-radius: 0rem !important;
+    border-top-right-radius: 0.2rem !important;
+    border-bottom-right-radius: 0.2rem !important;
+    color: $acs-gray;
+
+    &:hover {
+        border-left: none;
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+        background-color: $acs-gray-l40;
+        border-color: $acs-gray-d20;
+        color: $acs-gray-d20;
+
+        & > .btn-info-center-right-span {
+            color: $acs-gray-d20;
+        }
+
+        & > i {
+            color: $acs-gray-d20;
+        }
+    }
+
+    &:disabled {
+        background-color: $acs-white;
+        border-color: $acs-gray-d20 !important;
+        border-left: none;
+        border-top-left-radius: 0rem !important;
+        border-bottom-left-radius: 0rem !important;
+        border-top-right-radius: 0.2rem !important;
+        border-bottom-right-radius: 0.2rem !important;
+        color: $acs-gray;
+        cursor: default;
+        opacity: 1;
+        z-index: 1;
+
+        & > .btn-info-center-right-span {
+            opacity: 0.1;
+            color: $acs-gray-d20;
+        }
+
+        & > i {
+            opacity: 0.1;
+            color: $acs-gray-d20;
+        }
+    }
+
+    & > .btn-info-center-right-span {
+        color: $acs-gray;
+    }
+
+    & > i {
+        color: $acs-gray;
+    }
+}
+
+
+.aeon-btn-badgelink {
+    background-color: $acs-blue-l45;
+    border: 1px solid $acs-blue-l35;
+    color: $acs-blue-d20;
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+
+.aeon-btn-badgelink:hover {
+    background-color: $acs-blue-l35;
+    border: 1px solid $acs-blue-l15;
+    text-decoration: none;
+}
+
+/*Prevents split-button drop-down icon from changing it's margin on resize.*/
+.navbar .btn-group .btn {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+/*Navigate button Group END*/
